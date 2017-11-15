@@ -64,6 +64,8 @@ namespace Rad301ClubsV1.Migrations
                 SecurityStamp = Guid.NewGuid().ToString(),
             });
 
+            context.SaveChanges();
+
             ApplicationUser admin = manager.FindByEmail("powell.paul@itsligo.ie");
             if (admin != null)
             {
