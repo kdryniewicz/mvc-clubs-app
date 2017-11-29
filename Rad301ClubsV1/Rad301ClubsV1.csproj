@@ -196,9 +196,13 @@
     <Compile Include="Migrations\201611111008459_Initial.Designer.cs">
       <DependentUpon>201611111008459_Initial.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\ClubModelMigrations\201611011805192_Initial.cs" />
-    <Compile Include="Migrations\ClubModelMigrations\201611011805192_Initial.Designer.cs">
-      <DependentUpon>201611011805192_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\ClubModelMigrations\201711221029228_Initial.cs" />
+    <Compile Include="Migrations\ClubModelMigrations\201711221029228_Initial.Designer.cs">
+      <DependentUpon>201711221029228_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\ClubModelMigrations\201711221029504_Club initialise.cs" />
+    <Compile Include="Migrations\ClubModelMigrations\201711221029504_Club initialise.Designer.cs">
+      <DependentUpon>201711221029504_Club initialise.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\ClubModelMigrations\Configuration.cs" />
     <Compile Include="Migrations\ClubModelMigrations\StudentData.cs" />
@@ -226,6 +230,12 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <EmbeddedResource Include="Migrations\201611111008459_Initial.resx">
       <DependentUpon>201611111008459_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ClubModelMigrations\201711221029228_Initial.resx">
+      <DependentUpon>201711221029228_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ClubModelMigrations\201711221029504_Club initialise.resx">
+      <DependentUpon>201711221029504_Club initialise.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ClubModelMigrations\TestStudents.csv" />
     <None Include="Properties\PublishProfiles\pprad301ClubsApp - FTP.pubxml" />
@@ -299,11 +309,6 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\ClubModelMigrations\201611011805192_Initial.resx">
-      <DependentUpon>201611011805192_Initial.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

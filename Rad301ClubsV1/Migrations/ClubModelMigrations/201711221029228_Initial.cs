@@ -41,15 +41,12 @@ namespace Rad301ClubsV1.Migrations.ClubModelMigrations
                         ClubId = c.Int(nullable: false),
                         StudentID = c.String(nullable: false, maxLength: 128),
                         approved = c.Boolean(nullable: false),
-                        ClubEvent_EventID = c.Int(),
                     })
                 .PrimaryKey(t => new { t.memberID, t.ClubId, t.StudentID })
                 .ForeignKey("dbo.Club", t => t.ClubId, cascadeDelete: true)
                 .ForeignKey("dbo.Student", t => t.StudentID, cascadeDelete: true)
-                .ForeignKey("dbo.ClubEvent", t => t.ClubEvent_EventID)
                 .Index(t => t.ClubId)
-                .Index(t => t.StudentID)
-                .Index(t => t.ClubEvent_EventID);
+                .Index(t => t.StudentID);
             
             CreateTable(
                 "dbo.Student",
@@ -65,11 +62,9 @@ namespace Rad301ClubsV1.Migrations.ClubModelMigrations
         
         public override void Down()
         {
-            DropForeignKey("dbo.Member", "ClubEvent_EventID", "dbo.ClubEvent");
             DropForeignKey("dbo.ClubEvent", "ClubId", "dbo.Club");
             DropForeignKey("dbo.Member", "StudentID", "dbo.Student");
             DropForeignKey("dbo.Member", "ClubId", "dbo.Club");
-            DropIndex("dbo.Member", new[] { "ClubEvent_EventID" });
             DropIndex("dbo.Member", new[] { "StudentID" });
             DropIndex("dbo.Member", new[] { "ClubId" });
             DropIndex("dbo.ClubEvent", new[] { "ClubId" });
