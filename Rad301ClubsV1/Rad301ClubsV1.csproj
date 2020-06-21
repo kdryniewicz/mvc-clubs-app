@@ -204,13 +204,19 @@
     <Compile Include="Migrations\ClubModelMigrations\201711221029504_Club initialise.Designer.cs">
       <DependentUpon>201711221029504_Club initialise.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\ClubModelMigrations\201711291157306_course-and-students-added.cs" />
+    <Compile Include="Migrations\ClubModelMigrations\201711291157306_course-and-students-added.Designer.cs">
+      <DependentUpon>201711291157306_course-and-students-added.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\ClubModelMigrations\Configuration.cs" />
+    <Compile Include="Migrations\ClubModelMigrations\CoursesData.cs" />
     <Compile Include="Migrations\ClubModelMigrations\StudentData.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\ClubModel\Club.cs" />
     <Compile Include="Models\ClubModel\ClubContext.cs" />
     <Compile Include="Models\ClubModel\ClubEvent.cs" />
+    <Compile Include="Models\ClubModel\Course.cs" />
     <Compile Include="Models\ClubModel\Members.cs" />
     <Compile Include="Models\ClubModel\Student.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -237,7 +243,11 @@
     <EmbeddedResource Include="Migrations\ClubModelMigrations\201711221029504_Club initialise.resx">
       <DependentUpon>201711221029504_Club initialise.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\ClubModelMigrations\201711291157306_course-and-students-added.resx">
+      <DependentUpon>201711291157306_course-and-students-added.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Migrations\ClubModelMigrations\TestStudents.csv" />
+    <EmbeddedResource Include="Migrations\ClubModelMigrations\Courses.csv" />
     <None Include="Properties\PublishProfiles\pprad301ClubsApp - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\pprad301ClubsApp - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
